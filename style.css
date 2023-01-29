@@ -1,0 +1,119 @@
+
+:root {
+    --main-bg-color: hsl(233, 47%, 7%);
+    --card-bg-color: hsl(244, 38%, 16%);
+    --txt-accent-color: hsl(277, 64%, 61%);
+    --main-heading-color: hsl(0, 0%, 100%);
+    --main-pg-color: hsla(0, 0%, 100%, 0.75);
+    --stat-head-color: hsla(0, 0%, 100%, 0.6);
+
+    --fs-body: 15px;
+    --ff-inter-400: 400;
+    --ff-inter-700: 700;
+    --ff-lexend-400: 400;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--fs-body);
+}
+
+body {
+    height: 100vh;
+    background: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 375px;
+    height: 90%;
+    background: var(--card-bg-color);
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'inter';
+    cursor: pointer;
+}
+
+.card-photo {
+    height: 32%;
+    width: 100%;
+    background-image: url(./image-header-desktop.jpg);
+    background: linear-gradient(hsl(277, 64%, 61%));
+    background-size: cover;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: white;
+    padding: 2rem 1rem;
+    letter-spacing: -1px;
+}
+
+span {
+    color: var(--txt-accent-color);
+}
+
+.pg {
+    font-size: 1rem;
+    padding: 0 3.5rem;
+    color: var(--main-pg-color);
+}
+
+.template {
+    padding: 1.5rem;
+}
+
+.template span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.template p {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--main-pg-color);
+}
+
+@media (min-width: 1024px) {
+    .card {
+        height: 25rem;
+        width: 60rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .card-photo {
+        background: linear-gradient(hsl(277, 64%, 61%), url('./image-header-desktop.jpg'));
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .info {
+        text-align: left;
+    }
+
+    h2 {
+        padding: 2rem 3rem;
+    }
+
+    .templates {
+        margin: 2rem;
+    }
+
+    .template {
+        display: inline-block;
+    }
+
+    .template p {
+        font-size: 1rem;
+    }
+
+}
